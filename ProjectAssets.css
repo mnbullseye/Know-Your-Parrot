@@ -1,0 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Blinker:wght@100;200;300;400;600;700;800;900&family=Chewy&family=Lekton:ital,wght@0,400;0,700;1,400&family=Parisienne&family=Sniglet:wght@400;800&display=swap');
+
+
+:root{
+    --bg-clr: #fff6ab;
+    --heading1-clr: #2a310b;
+    --text-subheading-clr: #546d46;
+    --btn-text-clr: #fef492;
+    --light-green: #90b35c;
+    --pastel-green: #ceeca2;
+    --pastel-yellow-green: #e0fa79;
+
+    --main-heading: 'chewy';
+    --sub-heading: 'sniglet';
+    --text: 'blinker';
+    --side-notes: 'Parisienne';
+    --btn-text: 'lekton';
+}

@@ -13,7 +13,7 @@ body{
     top: 18;
     left: 15;
     z-index: 1;
-    font-size: 3rem;
+    font-size: 2.8rem;
     font-weight: bold;
     color: var(--heading1-clr);
     cursor: pointer;
@@ -28,17 +28,21 @@ body{
     background-size: cover;
     background-repeat: no-repeat;
     text-align: center;
+    cursor: url("Project Assets/arrow_downward_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg") 12 12, auto;
 }
+
+
 .hero h1{
     font-family: var(--main-heading);
-    font-size: 5rem;
+    font-size: 6rem;
+    text-decoration: none;
+    font-weight: 100;
     color: var(--bg-clr);
-    letter-spacing: 6;
 }
 .hero h3{
     font-family: var(--side-notes);
-    font-size: 2rem;
-    font-weight: 1000;
+    font-size: 3rem;
+    font-weight: 400;
     color: var(--pastel-yellow-green);
 }
 
@@ -54,7 +58,7 @@ body{
 
 .about-us{
     width: 98.8vw;
-    height: 600px;
+    height: 650px;
     background-color: var(--bg-clr);
     display: flex;
     flex-direction: row;
@@ -130,6 +134,11 @@ body{
     height: 50px;
     z-index: 1;
 }
+.btn-container button:hover{
+    cursor: pointer;
+    color: var(--heading1-clr);
+    background-color: var(--btn-text-clr);
+}
 .btn-container button, .btn-img-container, .btn-container{
     width: 200px;
 }
@@ -146,33 +155,107 @@ body{
     width: 35px;
 }
 
+
+
 /*Guides Page*/
 .guides{
     display: flex;
     flex-direction: column;
-    width: 100vw;
-    height: 600px;
+    width: 98.8vw;
+    height: 650px;
     background-color: var(--bg-clr);
-    border: 5px solid green;
+    /* border: 5px solid green; */
+    justify-content: center;
 }
 .guides-all{
     display: flex;
     flex-direction: row;
+    /* margin: 60px 30px 60px 30px;
+    padding: 30px; */
+    /* border: 5px solid black; */
+    padding: 0px 40px;
+}
+.guides-info{
+    display: flex;
+    flex-direction: column;
+    /* border: 5px solid aqua; */
+    padding: 30px;
+    text-align: center;
+    justify-content: center;
+    gap: 10px;
+}
+.guides-info h3{
+    font-family: var(--side-notes);
+    color: var(--text-subheading-clr);
+    font-size: 3rem;
+}
+.guides-info h2{
+    font-family: var(--main-heading);
+    color: var(--heading1-clr);
+    font-size: 4.8rem;
+    
+    font-weight: 100;
+}
+.guides-info p{
+    font-family: var(--text);
+    color: var(--text-subheading-clr);
+    /* padding: 0px 90px; */
+    font-size: 1.8rem;
+    /* border: 5px solid orange; */
+    margin: 10px 0px;
+    padding: 0px 20px;
+}
+.guides-info .btn-container{
+    align-self: center;
 }
 
 .mul-guides{
     display: flex;
     flex-direction: row;
-    border: 5px solid red;
+    /* border: 5px solid red; */
+    
+}
+.guide{
+    /* border: 5px solid gray; */
+    width: 300px;
+    height: 420px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    padding: 10px;
+}
+.guide p{
+    font-family: var(--text);
+    color: var(--heading1-clr);
+    font-size: 1rem;
+}
+.guide button{
+    background-color: var(--bg-clr);
+    color: var(--light-green);
+    font-family: var(--sub-heading);
+    font-size: 1.3rem;
+    border: none;
+}
+.guide button:hover{
+    cursor: pointer;
+    font-weight: bold;
 }
 .guide img{
-    width: 300px;
+    width: 220px;
+    align-self: center;
 }
 
 
 .guides-parrot-row{
-    border: 5px solid blue;
+    /* border: 5px solid blue; */
 }
 .guides-parrot-row img{
     width: 5.93vh;
+}
+
+.guides-parrot-row{
+    /* align-self: flex-end; */
+    margin-top: 65px;
+    margin-left: 40px;
 }

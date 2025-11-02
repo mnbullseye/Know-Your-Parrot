@@ -1,0 +1,105 @@
+@import url("ProjectAssets.css");
+body{
+  margin: 0;
+  height: 100vh;
+  background-color: var(--bg-clr);
+  display: flex;
+  /* flex-direction: column; */
+  justify-content: center;
+  align-items: center;
+}
+header{
+  display: flex;
+  flex-direction: row;
+}
+main{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 5%;
+}
+h1{
+  color: var(--heading1-clr);
+  font-family: var(--main-heading);
+  font-weight: bold;
+  font-size: 46px;
+  line-height: 1.4–1.6;
+  padding: 35px;
+  margin-bottom: 0;
+}
+h2{
+  color: var(--text-subheading-clr);
+  font-family: var(--side-notes);
+  font-weight: bold;
+  font-size: 36px;
+  padding: 35px;
+  margin-bottom: 0;
+}
+a{
+  color: var(--heading1-clr);
+  font-family: var(--sub-heading);
+  font-weight: bold;
+  font-size: 16px;
+  margin-bottom: 0;
+  text-decoration: none;
+}
+a:hover{
+  /* text-decoration: wavy; */
+  color: var(--light-green);
+}
+p{
+  /* color: var(--text-subheading-clr); */
+  font-family: var(--text);
+  font-weight: 400;
+  font-size: 13px;
+  margin-top: 0;
+}
+.heading{
+  display: flex;
+  flex-direction: row;
+  padding: 12px;
+  justify-content: center;
+}
+.category{
+  display: flex;
+  flex-direction: row;
+  padding: 12px;
+  justify-content: space-evenly;
+  text-align: center;
+}
+.cat{
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+#img1, #img2, #img3{
+  background-repeat: no-repeat;
+  background-size: contain; /* fills the div without stretching */
+  background-position: center; /* keeps the main part of image centered */
+  background-attachment: scroll; /* or use 'fixed' for parallax effect */
+  width: 250px;
+  height: 200px;
+  border-radius: 10px;
+  border: 2px solid var(--heading1-clr);
+}
+#img1{
+  background-image: url("Shop Assets/toys.png");
+}
+#img2{
+  background-image: url("Shop Assets/food.png");
+}
+#img3{
+  background-image: url("Shop Assets/accessories.png");
+}
+.fa-bars, .fa-cart-shopping{
+  font-size: 30px;
+}
+.fa-bars{
+  align-self: flex-start;
+}
+.fa-cart-shopping{
+  align-self: flex-end;
+}
+/* .category, #img1, #img2, #img3{border: 1px solid violet;} */
+/* *{border: 1px solid purple;} */

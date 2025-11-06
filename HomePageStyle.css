@@ -57,7 +57,7 @@ body{
 
 
 .about-us{
-    width: 98.8vw;
+    /* width: 100vw; */
     height: 650px;
     background-color: var(--bg-clr);
     display: flex;
@@ -138,6 +138,7 @@ body{
     cursor: pointer;
     color: var(--heading1-clr);
     background-color: var(--btn-text-clr);
+    border: 5px solid var(--heading1-clr);
 }
 .btn-container button, .btn-img-container, .btn-container{
     width: 200px;
@@ -149,7 +150,7 @@ body{
     padding-left: 20px;
     /* border: 5px solid black; */
     position: absolute;
-    top: -25px;
+    top: -33px;
 }
 .btn-img{
     width: 35px;
@@ -161,7 +162,7 @@ body{
 .guides{
     display: flex;
     flex-direction: column;
-    width: 98.8vw;
+    /* width: 100vw; */
     height: 650px;
     background-color: var(--bg-clr);
     /* border: 5px solid green; */
@@ -258,4 +259,61 @@ body{
     /* align-self: flex-end; */
     margin-top: 65px;
     margin-left: 40px;
+}
+
+
+
+.shop{
+    /* width: 100vw; */
+    height: 650px;
+    display: flex;
+    flex-direction: column;
+}
+.footer{
+    display: flex;
+    flex-direction: column;
+    border: 5px solid blueviolet;
+}
+.footer-parrot-container{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    background-color: var(--bg-clr);
+}
+.footer-parrot-container div{
+    width: 50vw;
+    padding: 0px 15px;
+}
+.footer-parrot-images-container-left{
+    display: flex;
+    flex-direction: row;
+}
+.footer-parrot-images-container-right{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+.footer img{
+    width: 50px;
+    padding: 0px 5px;
+   
+}
+.footer-info{
+    height: 23vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    background-color: var(--heading1-clr);
+    color: white;
+    font-family: var(--text);
+    letter-spacing: 1;
+}
+.footer-icon{
+    font-size: 2rem;
+    margin: 15px;
+    text-decoration: none;
+}
+.footer-info p{
+    margin-top: 15px;
 }

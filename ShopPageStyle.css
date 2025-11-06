@@ -3,20 +3,18 @@ body{
   margin: 0;
   height: 100vh;
   background-color: var(--bg-clr);
-  display: flex;
-  /* flex-direction: column; */
-  justify-content: center;
-  align-items: center;
 }
 header{
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
+  position: sticky;
+  padding: 10px 25px;
 }
 main{
   display: flex;
   flex-direction: column;
   width: 100%;
-  padding: 5%;
 }
 h1{
   color: var(--heading1-clr);
@@ -26,6 +24,8 @@ h1{
   line-height: 1.4–1.6;
   padding: 35px;
   margin-bottom: 0;
+  margin-top: 0;
+  padding-top: 0;
 }
 h2{
   color: var(--text-subheading-clr);
@@ -34,6 +34,8 @@ h2{
   font-size: 36px;
   padding: 35px;
   margin-bottom: 0;
+  margin-top: 0;
+  padding-top: 0;
 }
 a{
   color: var(--heading1-clr);
@@ -92,8 +94,9 @@ p{
 #img3{
   background-image: url("Shop Assets/accessories.png");
 }
-.fa-bars, .fa-cart-shopping{
+header i {
   font-size: 30px;
+  color: var(--text-subheading-clr);
 }
 .fa-bars{
   align-self: flex-start;
@@ -101,5 +104,3 @@ p{
 .fa-cart-shopping{
   align-self: flex-end;
 }
-/* .category, #img1, #img2, #img3{border: 1px solid violet;} */
-/* *{border: 1px solid purple;} */

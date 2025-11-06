@@ -1,0 +1,95 @@
+@import url("ProjectAssets.css");
+body{
+  background-color: var(--bg-clr);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+}
+h1{
+  color: var(--bg-clr);
+  font-family: var(--side-notes);
+  font-weight: bold;
+  font-size: 36px;
+}
+main{
+  background-color: var(--heading1-clr);
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding: 40px 50px;
+  border-radius: 25px;
+  width: 500px;
+}
+section, .cont, #btn{
+  width: 100%;
+  width: 500px;
+  margin: 12px 0;
+  border-radius: 8px;
+}
+section{
+  background-color: var(--light-green);
+  overflow: hidden ;
+  display: flex;
+  justify-content: space-between;
+}
+#log, #sign{
+  font-family: var(--sub-heading);
+  cursor: pointer;
+  border: none;
+  flex: 1;
+  width: 200px;
+  padding: 10px 0;
+  border-radius: 8px;
+  font-size: 15px;
+}
+#log{
+  background-color: var(--pastel-green);
+}
+#sign{
+  background-color: var(--light-green);
+}
+.cont{
+  background-color: var(--light-green);
+  color: var(--heading1-clr);
+  display: flex;
+  border-radius: 8px;
+  padding: 10px;
+  font-weight: 80;
+  font-size: 14px;
+  box-sizing: border-box; /* ensures padding doesn’t break width */
+}
+.cont::placeholder{
+  opacity: 1;
+  color: #333;
+  font-weight: 500;
+}
+p{
+  color: var(--text-subheading-clr);
+  font-family: var(--btn-text);
+  align-self: flex-start;
+  font-weight: 400;
+  font-size: 20px;
+  margin: 0;
+}
+#btn{
+    background-color: var(--heading1-clr);
+    border: 5px solid var(--light-green);
+    color: var(--btn-text-clr);
+    font-family: var(--btn-text);
+    font-weight: bold;
+    border-radius: 20px;
+    height: 50px;
+    z-index: 1;
+}
+#btn:hover{
+    cursor: pointer;
+    color: var(--heading1-clr);
+    background-color: var(--btn-text-clr);
+}
+#btn{
+    width: 200px;
+}

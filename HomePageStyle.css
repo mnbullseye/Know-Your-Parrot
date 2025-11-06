@@ -7,6 +7,9 @@
 body{
    position: relative;
 }
+a{
+    text-decoration: none;
+}
 .nav-btn{
     display: block;
     position: fixed;
@@ -49,12 +52,14 @@ body{
 .gradient-bar{
     background: linear-gradient(to right, #4a5813, yellow, #4a5813);
     width: 100%;
-    height: 5.93vh;
+    height: 6.09vh;
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
 }
-
+.gradient-bar img{
+    object-fit: cover;
+}
 
 .about-us{
     /* width: 100vw; */
@@ -89,8 +94,9 @@ body{
     width: 70px;
     height: 118px;
     position: absolute;
-    top: -40px;
-    right: 100px;
+    top: 0;
+    right: 0;
+    transform: translate(20%, -50%);
 }
 .about-us p{
     font-size: 1.2rem;
@@ -146,14 +152,16 @@ body{
 .btn-img-container{
     display: flex;
     flex-direction: row;
-    gap: 90px;
+    gap: 80px;
     padding-left: 20px;
+    padding-right: 20px;
     /* border: 5px solid black; */
     position: absolute;
-    top: -33px;
+    top: -44px;
+    left: -10px;
 }
 .btn-img{
-    width: 35px;
+    width: 45px;
 }
 
 
@@ -184,6 +192,11 @@ body{
     text-align: center;
     justify-content: center;
     gap: 10px;
+}
+.guides-info a{
+    text-align: center;
+    display: flex;
+    justify-content: center;
 }
 .guides-info h3{
     font-family: var(--side-notes);
@@ -225,6 +238,10 @@ body{
     justify-content: center;
     text-align: center;
     padding: 10px;
+    
+}
+.guide:hover{
+    box-shadow: 0px 20px 10px 2px rgba(0, 0, 0, 0.2);
 }
 .guide p{
     font-family: var(--text);
@@ -240,20 +257,14 @@ body{
 }
 .guide button:hover{
     cursor: pointer;
-    font-weight: bold;
+    font-size: 1.6rem;
+    color: var(--heading1-clr);
 }
 .guide img{
     width: 220px;
     align-self: center;
 }
 
-
-.guides-parrot-row{
-    /* border: 5px solid blue; */
-}
-.guides-parrot-row img{
-    width: 5.93vh;
-}
 
 .guides-parrot-row{
     /* align-self: flex-end; */
@@ -268,11 +279,109 @@ body{
     height: 650px;
     display: flex;
     flex-direction: column;
+    justify-content: flex-end;
+    background-color: var(--bg-clr);
+    /* border: 5px solid grey; */
+}
+.products{
+    display: flex;
+    flex-direction: row;
+    /* border: 5px solid black; */
+    padding: 50px;
+    gap: 20px;
+}
+.product-categories{
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    /* border: 5px solid rgb(112, 9, 9); */
+}
+.product-container{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    border-bottom-left-radius: 20px ;
+    border-bottom-right-radius: 20px;
+    text-align: center;
+    /* border: 5px solid grey; */
+}
+.product-container:hover{
+    box-shadow: 0 20px 10px 2px rgba(0, 0, 0, 0.2);
+}
+.product-container button{
+    font-family: var(--sub-heading);
+    font-size: 1.2rem;
+    color: var(--light-green);
+    background-color: var(--bg-clr);
+    border: 1px solid var(--bg-clr);
+    border-bottom-left-radius: 20px ;
+    border-bottom-right-radius: 20px;
+    margin-bottom: 8px;
+}
+.product-container button:hover{
+    font-size: 1.4rem;
+    color: var(--heading1-clr);
+    cursor: pointer;
+}
+.product-container img{
+    width: 220px;
+    height: 250px;
+    border: 5px solid var(--light-green);
+    border-radius: 20px;
+    object-fit: cover;
+    background-color: var(--dark-yellow);
+    cursor: pointer;
+}
+
+.shop-info{
+    /* border: 5px solid red; */
+    padding: 0px 30px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.heading-img-container{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    /* border: 5px solid aqua; */
+}
+.heading-img-container img{
+    width: 80px;
+    height: 60px;
+    position: absolute;
+    top: 42%;
+    left: 75%
+}
+.shop-info h3{
+    font-family: var(--side-notes);
+    color: var(--grey-green);
+    font-size: 2.5rem;
+    width: 70%;
+    letter-spacing: 2;
+    padding: 0px;
+    /* border: 5px solid orangered; */
+}
+.shop-info h2{
+    font-family: var(--main-heading);
+    color: var(--heading1-clr);
+    font-size: 4.5rem;
+    cursor: pointer;
+}
+.shop-info h2:hover{
+    color: black;
+    font-size: 5rem;
+}
+.shop-info p{
+    font-family: var(--text);
+    color: var(--grey-green);
 }
 .footer{
     display: flex;
     flex-direction: column;
-    border: 5px solid blueviolet;
+    /* border: 5px solid blueviolet; */
 }
 .footer-parrot-container{
     position: relative;
@@ -309,10 +418,18 @@ body{
     font-family: var(--text);
     letter-spacing: 1;
 }
+.footer a{
+    color: white;
+}
 .footer-icon{
     font-size: 2rem;
     margin: 15px;
     text-decoration: none;
+}
+.footer-icon:hover{
+    font-size: 2.3rem;
+    color: var(--pastel-green);
+    cursor: pointer;
 }
 .footer-info p{
     margin-top: 15px;

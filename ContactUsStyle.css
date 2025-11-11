@@ -64,28 +64,38 @@ p{
   font-family: var(--btn-text);
   background-color: var(--heading1-clr);
   font-size: 17px;
+  display: flex;
+  border-radius: 8px;
+  padding: 10px;
+  font-weight: 80;
+  box-sizing: border-box; /* ensures padding doesn’t break width */
 }
 .input-field::placeholder{
   color: var(--light-green);
+}
+.input-field:focus{
+  background-color: var(--text-subheading-clr);
+  outline: none;
 }
 #msg{
   height: 30%;
   text-align: left;
 }
 button{
-    background-color: var(--heading1-clr);
-    border: 5px solid var(--light-green);
-    color: var(--btn-text-clr);
+    color: var(--heading1-clr);
+    background-color: var(--pastel-yellow-green);
+    border: 5px solid var(--heading1-clr);
     font-family: var(--btn-text);
     font-weight: bold;
+    font-size: 14px;
     border-radius: 20px;
     height: 50px;
     z-index: 1;
 }
 button:hover{
     cursor: pointer;
-    color: var(--heading1-clr);
-    background-color: var(--btn-text-clr);
+    color: var(--btn-text-clr);
+    background-color: var(--heading1-clr);
 }
 button{
     width: 200px;

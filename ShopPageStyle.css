@@ -21,7 +21,7 @@ h1{
   font-family: var(--main-heading);
   font-weight: bold;
   font-size: 46px;
-  line-height: 1.4–1.6;
+  /* line-height: 1.4–1.6; */
   padding: 35px;
   margin-bottom: 0;
   margin-top: 0;
@@ -38,7 +38,7 @@ h2{
   padding-top: 0;
 }
 a{
-  color: var(--heading1-clr);
+  color: var(--light-green);
   font-family: var(--sub-heading);
   font-weight: bold;
   font-size: 16px;
@@ -46,8 +46,7 @@ a{
   text-decoration: none;
 }
 a:hover{
-  /* text-decoration: wavy; */
-  color: var(--light-green);
+  color: var(--heading1-clr);
 }
 p{
   /* color: var(--text-subheading-clr); */
@@ -58,9 +57,10 @@ p{
 }
 .heading{
   display: flex;
-  flex-direction: row;
-  padding: 12px;
+  flex-direction: column;
+  padding: 0;
   justify-content: center;
+  align-items: center;
 }
 .category{
   display: flex;
@@ -80,10 +80,11 @@ p{
   background-size: contain; /* fills the div without stretching */
   background-position: center; /* keeps the main part of image centered */
   background-attachment: scroll; /* or use 'fixed' for parallax effect */
+  background-color: #fdf07a;
   width: 250px;
   height: 200px;
   border-radius: 10px;
-  border: 2px solid var(--heading1-clr);
+  border: 4px solid var(--heading1-clr);
 }
 #img1{
   background-image: url("Shop Assets/toys.png");

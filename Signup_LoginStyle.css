@@ -36,6 +36,18 @@ section{
   display: flex;
   justify-content: space-between;
 }
+a{
+  /* width: unset; */
+  color: var(--pastel-green);
+  font-family: var(--sub-heading);
+  font-size: 16px;
+  margin-bottom: 0;
+  text-decoration: none;
+}
+a:hover{
+  /* text-decoration: wavy; */
+  color: var(--heading1-clr);
+}
 #log, #sign{
   font-family: var(--sub-heading);
   cursor: pointer;
@@ -46,12 +58,7 @@ section{
   border-radius: 8px;
   font-size: 15px;
 }
-#log{
-  background-color: var(--pastel-green);
-}
-#sign{
-  background-color: var(--light-green);
-}
+
 .cont{
   background-color: var(--light-green);
   color: var(--heading1-clr);
@@ -66,6 +73,11 @@ section{
   opacity: 1;
   color: #333;
   font-weight: 500;
+  
+}
+.cont:focus{
+  background-color: var(--pastel-green);
+  outline: none;
 }
 p{
   color: var(--text-subheading-clr);
@@ -76,19 +88,21 @@ p{
   margin: 0;
 }
 #btn{
-    background-color: var(--heading1-clr);
+    color: var(--heading1-clr);
+    background-color: var(--pastel-yellow-green);
     border: 5px solid var(--light-green);
-    color: var(--btn-text-clr);
     font-family: var(--btn-text);
     font-weight: bold;
+    font-size: 14px;
     border-radius: 20px;
     height: 50px;
     z-index: 1;
 }
 #btn:hover{
     cursor: pointer;
-    color: var(--heading1-clr);
-    background-color: var(--btn-text-clr);
+    background-color: var(--heading1-clr);
+    color: var(--btn-text-clr);
+
 }
 #btn{
     width: 200px;

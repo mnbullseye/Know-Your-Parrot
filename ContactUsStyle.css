@@ -1,48 +1,74 @@
 @import url("ProjectAssets.css");
+
 body{
   margin: 0;
-  height: 100vh;
+  min-height: 100vh;
   background-color: var(--bg-clr);
   display: flex;
-  /* flex-direction: column; */
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
+
 main{
   display: flex;
   flex-direction: column;
-  width: 100%;
-  padding: 5%;
+  width: 90%;
+  padding: 10px;
+  box-sizing: border-box;
+  margin-bottom: 100px;
 }
+
 h1{
   color: var(--text-subheading-clr);
   font-family: var(--side-notes);
   font-weight: bold;
-  font-size: 36px;
-  line-height: 1.4–1.6;
+  font-size: clamp(24px, 4vw, 36px);
   margin-bottom: 0;
 }
+
+header {
+  display: flex;
+  align-self: flex-start;
+  position: sticky;
+  top: 0;
+  margin: 10px;
+  padding: 7px;
+  z-index: 100;
+}
+header i {
+  font-size: 30px;
+  color: var(--text-subheading-clr);
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+header i:hover {
+  color: var(--heading1-clr);
+}
+
 p{
-  /* color: var(--text-subheading-clr); */
   font-family: var(--text);
   align-self: flex-start;
   font-weight: 400;
-  font-size: 20px;
+  font-size: clamp(16px, 2vw, 20px);
   margin-top: 0;
 }
+
 .contacts{
-  flex: 3;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  padding: 2px;
+  width: 100%;
+  padding: 12px;
 }
+
 .info{
   width: 50%;
   display: flex;
   flex-direction: column;
-  gap: 2px;
 }
+
 .send-msg{
   display: flex;
   flex-direction: column;
@@ -51,52 +77,257 @@ p{
   color: var(--heading1-clr);
   align-items: center;
   border-radius: 25px;
-  padding: 10px;
-  gap: 5px;
+  padding: 7px;
+  gap: 15px;
   width: 40%;
+  box-sizing: border-box;
 }
+
+.head{
+  margin-bottom: 5px;
+}
+
 .input-field, button{
-  width: 100%;
   width: 90%;
-  height: 10%;
 }
+
 .input-field{
   font-family: var(--btn-text);
   background-color: var(--heading1-clr);
-  font-size: 17px;
+  font-size: clamp(15px, 1.5vw, 17px);
   display: flex;
   border-radius: 8px;
-  padding: 10px;
-  font-weight: 80;
-  box-sizing: border-box; /* ensures padding doesn’t break width */
+  padding: 7px;
+  font-weight: 50;
+  box-sizing: border-box;
+  border: none;
 }
+
 .input-field::placeholder{
   color: var(--light-green);
 }
+
 .input-field:focus{
   background-color: var(--text-subheading-clr);
   outline: none;
 }
+
 #msg{
-  height: 30%;
+  min-height: 70px;
   text-align: left;
+  resize: vertical;
 }
+
 button{
-    color: var(--heading1-clr);
-    background-color: var(--pastel-yellow-green);
-    border: 5px solid var(--heading1-clr);
-    font-family: var(--btn-text);
-    font-weight: bold;
-    font-size: 14px;
-    border-radius: 20px;
-    height: 50px;
-    z-index: 1;
+  color: var(--heading1-clr);
+  background-color: var(--pastel-yellow-green);
+  border: 5px solid var(--heading1-clr);
+  font-family: var(--btn-text);
+  font-weight: bold;
+  font-size: clamp(13px, 1.5vw, 14px);
+  border-radius: 20px;
+  min-height: 50px;
+  z-index: 1;
+  width: 200px;
+  max-width: 90%;
+  transition: all 0.3s ease;
 }
+
 button:hover{
-    cursor: pointer;
-    color: var(--btn-text-clr);
-    background-color: var(--heading1-clr);
+  cursor: pointer;
+  color: var(--btn-text-clr);
+  background-color: var(--heading1-clr);
 }
-button{
-    width: 200px;
+
+/* footer is the seame as in home page */
+.footer{
+  display: flex;
+  flex-direction: column;
+  /* min-width: 50vw; */
+
+}
+.footer-parrot-container{
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  background-color: var(--bg-clr);
+}
+.footer-parrot-container div{
+  min-width: 47.03vw;
+  padding: 0px 15px;
+}
+.footer-parrot-images-container-left{
+  display: flex;
+  flex-direction: row;
+}
+.footer-parrot-images-container-right{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+.footer img{
+  width: 50px;
+  padding: 0px 5px; 
+}
+.footer-info{
+  height: 23vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  background-color: var(--heading1-clr);
+  color: white;
+  font-family: var(--text);
+  letter-spacing: 1;
+}
+.footer a{
+  color: white;
+}
+.footer-icon{
+  font-size: 2rem;
+  margin: 15px;
+  gap: 5px;
+  text-decoration: none;
+  transition: transform 0.3s ease;
+}
+.footer-icon:hover{
+  font-size: 2.3rem;
+  color: var(--pastel-green);
+  cursor: pointer;
+  transform: scale(1.02);
+}
+.footer-info p{
+  margin-top: 15px;
+  align-self: center;
+}
+
+/* Tablet screens (768px and below) */
+@media screen and (max-width: 800px) {
+  main{
+    padding: 3%;
+  }
+  .contacts{
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+  .info{
+    width: 100%;
+  }
+  .send-msg{
+    width: 100%;
+    padding: 25px 15px;
+  }
+  h1{
+    font-size: clamp(20px, 5vw, 28px);
+  }
+  p{
+    font-size: clamp(14px, 2.5vw, 18px);
+  }
+  .footer-parrot-container {
+    flex-direction: row;
+    align-items: center;
+    text-align: center;
+  }
+  .footer-parrot-container div {
+    width: 50vw;
+    min-width: auto;
+    justify-content: center;
+    padding: 10px 0;
+  }
+  .footer-parrot-images-container-left{
+    justify-content: flex-start;
+  }
+  .footer-parrot-images-container-right {
+    justify-content: flex-end;
+  }
+  .footer img {
+    width: 40px;
+    padding: 3px;
+  }
+  .footer-info {
+    height: auto;
+    padding: 20px 0;
+  }
+}
+
+/* Mobile screens (480px and below) */
+@media screen and (max-width: 480px) {
+  body{
+    align-items: flex-start;
+  }
+  main{
+    padding: 5% 3%;
+  }
+  .contacts{
+    gap: 25px;
+  }
+  .info{
+    gap: 2px;
+  }
+  .info > div{
+    padding: 7px 0;
+  }
+  .send-msg{
+    padding: 20px 10px;
+    border-radius: 15px;
+    gap: 12px;
+  }
+  .input-field{
+    padding: 10px;
+    font-size: 15px;
+  }
+  #msg{
+    min-height: 100px;
+  }
+  button{
+    width: 180px;
+    font-size: 13px;
+    min-height: 45px;
+  }
+  h1{
+    font-size: 22px;
+  }
+  p{
+    font-size: 15px;
+  }
+  .footer-parrot-container {
+    gap: 10px;
+  }
+  .footer img {
+    width: 35px;
+  }
+  .footer-icon {
+    font-size: 1.7rem;
+    margin: 10px;
+  }
+  .footer-icon:hover {
+    font-size: 1.9rem;
+  }
+}
+
+/* Small mobile screens (360px and below) */
+@media screen and (max-width: 360px) {
+  main{
+    padding: 3% 2%;
+  }
+  .send-msg{
+    padding: 15px 8px;
+  }
+  .input-field{
+    width: 95%;
+  }
+  button{
+    width: 160px;
+  }
+  .footer img {
+    width: 30px;
+  }
+  .footer-icon {
+    font-size: 1.5rem;
+    margin: 8px;
+  }
+  .footer-info p {
+    font-size: 13px;
+  }
 }

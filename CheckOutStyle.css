@@ -1,4 +1,5 @@
 @import url("ProjectAssets.css");
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -35,7 +36,7 @@ a{
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
-
+/* --- 2. Main Two-Column Layout (Flexbox) --- */
 .main-content {
     display: flex;
     gap: 50px;
@@ -51,6 +52,7 @@ a{
     flex: 2;
     min-width: 0;
     
+    /* Cart Summary Styling */
     background: var(--bg-clr);
     padding: 20px;
     border-radius: 6px;
@@ -58,7 +60,7 @@ a{
     height: fit-content;
 }
 
-
+/* --- 3. Left Column: Shipping Details (Form) --- */
 .shipping-details h2 {
     font-family: var(--sub-heading), sans-serif;
     color: var(--heading1-clr);
@@ -67,7 +69,7 @@ a{
     margin-bottom: 30px;
 }
 
-
+/* Flexbox for two-column form rows */
 .form-row {
     display: flex;
     gap: 20px;
@@ -98,12 +100,12 @@ a{
     background-color: var(--bg-clr);
 }
 
-
+/* Specific styling for the three-column row (City/State/Zip) */
 .form-row.three-col .form-group {
     flex-basis: 33.33%; 
 }
 
-
+/* --- PHONE INPUT STYLING (Static Code) --- */
 .phone-input-group {
     display: flex;
 }
@@ -131,6 +133,7 @@ a{
     border-radius: 0 4px 4px 0;
 }
 
+/* --- PAYMENT METHOD STYLING (Cash On Delivery) --- */
 
 .payment-method-title {
     font-family: var(--sub-heading), sans-serif;
@@ -147,23 +150,29 @@ a{
     margin-bottom: 20px;
 }
 
+/* Shared styling for option cards (Shipping/Payment) */
 .option-card {
     display: flex;
     align-items: center;
-    justify-content: flex-start; 
+    justify-content: flex-start; /* Align contents to start */
     padding: 20px;
     border: 2px solid var(--light-green);
     border-radius: 6px;
     background-color: var(--bg-clr);
 }
 
+.payment-card {
+    /* Specific overrides for payment card if needed, but primarily uses .option-card */
+}
 
+/* Styling for the radio button and label content */
 .option-card label {
     display: flex;
     flex-direction: column;
     flex-grow: 1;
-    margin-left: 20px; 
+    margin-left: 10px; /* Space between radio button and text */
 }
+
 .option-card strong {
     color: var(--heading1-clr);
     font-family: var(--text), sans-serif;
@@ -177,7 +186,7 @@ a{
 }
 
 
-
+/* --- 4. Right Column: Cart Summary --- */
 
 .cart-summary h2 {
     font-family: var(--sub-heading), sans-serif;
@@ -188,6 +197,7 @@ a{
     border-bottom: 2px solid var(--light-green);
 }
 
+/* Cart Items */
 .cart-item {
     display: flex;
     justify-content: space-between;
@@ -210,7 +220,7 @@ a{
     width: 60px;
     height: 60px;
     border-radius: 4px;
-    border: 1px solid var(--pastel-green); 
+    border: 1px solid var(--pastel-green); /* Optional subtle border for images */
 }
 
 .item-info {
@@ -218,6 +228,7 @@ a{
 }
 
 .item-info .quantity {
+    /* Style for the black circle '1' placeholder */
     position: absolute;
     top: -20px;
     left: -15px;
@@ -240,6 +251,7 @@ a{
 
 
 
+/* --- Totals Summary --- */
 .totals {
     padding-top: 20px;
 }
@@ -263,6 +275,7 @@ a{
     color: var(--heading1-clr);
 }
 
+/* Checkout Button */
 .checkout-btn {
     width: 100%;
     padding: 18px; 
@@ -287,6 +300,9 @@ a{
 
 
 
+/* --- RESPONSIVENESS (Media Queries) --- */
+
+/* 1. Small Screens (Mobile Phones up to 480px) */
 @media (max-width: 480px) {
     body {
         padding: 15px;
@@ -296,29 +312,37 @@ a{
         padding: 20px;
     }
 
+    /* Stack the main content columns */
     .main-content {
         flex-direction: column;
         gap: 30px;
     }
 
-    .form-row, .form-row.three-col {
+    /* Full width for all form rows */
+    .form-row,
+    .form-row.three-col {
         flex-direction: column;
         gap: 15px;
     }
     
     .form-row.three-col .form-group {
-        flex-basis: auto; 
+        flex-basis: auto; /* Allow elements to take full width */
     }
     
+    /* Ensure the phone input group maintains structure */
     .phone-input-group {
         flex-direction: row;
     }
 
-    .shipping-details h2, .cart-summary h2, .payment-method-title {
+    /* Adjust heading size for smaller view */
+    .shipping-details h2,
+    .cart-summary h2,
+    .payment-method-title {
         font-size: 20px;
         margin-bottom: 15px;
     }
 
+    /* Make cart items stack slightly better */
     .cart-item {
         padding: 15px 0;
         align-items: flex-start;
@@ -334,13 +358,17 @@ a{
     }
 }
 
+/* 2. Small Tablets (768px and below) */
 @media (max-width: 768px) {
     .main-content {
+        /* This is the key change: Stack the columns */
         flex-direction: column;
         gap: 40px;
     }
 
-    .shipping-details, .cart-summary {
+    .shipping-details,
+    .cart-summary {
+        /* Both columns take full width when stacked */
         flex: auto;
     }
 
@@ -348,19 +376,23 @@ a{
         padding: 30px;
     }
     
+    /* Allow the two-column rows to still work, but simplify the three-column row */
     .form-row.three-col {
         flex-wrap: wrap;
     }
     
-    .form-row.three-col .form-group:nth-child(1), .form-row.three-col .form-group:nth-child(2) {
-        flex-basis: calc(50% - 10px); 
+    /* On small tablets, force city/state/zip into two rows of two/one */
+    .form-row.three-col .form-group:nth-child(1),
+    .form-row.three-col .form-group:nth-child(2) {
+        flex-basis: calc(50% - 10px); /* Two columns, allowing for the 20px gap */
     }
     
     .form-row.three-col .form-group:nth-child(3) {
-        flex-basis: 100%; 
-        margin-top: -10px; 
+        flex-basis: 100%; /* Zip Code takes full width */
+        margin-top: -10px; /* Pull it up slightly */
     }
     
+    /* Revert the stacking for screens slightly larger than mobile */
     @media (min-width: 481px) {
         .form-row {
             flex-direction: row;
@@ -368,13 +400,15 @@ a{
     }
 }
 
+/* 3. Large Tablets and Desktops (1024px and below) */
 @media (max-width: 1024px) {
+    /* Keep the two-column structure but slightly reduce padding and gap */
     .main-content {
         gap: 30px;
     }
     
     .shipping-details {
-        flex: 6; 
+        flex: 6; /* Give slightly more room to shipping details */
     }
     
     .cart-summary {

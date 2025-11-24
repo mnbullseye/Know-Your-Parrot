@@ -27,7 +27,7 @@ a{
 }
 .cart-btn{
     display: block;
-    position: absolute;
+    position: fixed;
     font-size: 2.8rem;
     font-weight: bold;
     color: var(--heading1-clr);
@@ -35,6 +35,9 @@ a{
     top: 18;
     right: 15;
 
+}
+.cart-btn:hover{
+    color: var(--text-subheading-clr);
 }
 
 
@@ -114,6 +117,9 @@ h2{
     font-weight: bold;
     font-size: 1rem;
 }
+.count-container button:hover{
+    cursor: pointer;
+}
 
 
 
@@ -171,7 +177,15 @@ h2{
     border-radius: 10px;
     width: 100%;
     font-family: var(--btn-text);
+    font-size: 1rem;
+    font-weight: bold;
     color: var(--btn-text-clr);
+}
+.summary-container button:hover{
+    background-color: var(--btn-text-clr);
+    border: 3px solid var(--heading1-clr);
+    color: var(--heading1-clr);
+    cursor: pointer;
 }
 
 
@@ -284,4 +298,60 @@ h2{
 }
 .footer-info p{
     margin-top: 15px;
+}
+
+
+
+@media (min-width: 601px) and (max-width: 1024px){
+    body, main {
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .footer {
+        margin-top: auto;
+    }
+}
+
+@media (min-width: 300px) and (max-width: 600px){
+    .cart{
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .cart h2{
+        margin-top: 80px;
+    }
+    .item-summary{
+        flex-direction: column;
+        gap: 10px;
+    }
+    .items-container{
+        gap: 40px;
+    }
+    .footer{
+        display: none;
+    }
+    .summary-container{
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100vw;
+        border: none;
+        border-radius: 0;
+    }
+    .summary-container h4{
+        display: none;
+    }
+    .subtotal {
+        padding-bottom: 5px;
+        padding-top: 5px;
+    }
+    .shipping{
+        padding-bottom: 8px;
+    }
+    .total{
+        padding-top: 8px;
+        padding-bottom: 5px;
+    }
 }

@@ -16,14 +16,22 @@ main{
   width: 90%;
   padding: 10px;
   box-sizing: border-box;
-  margin-bottom: 100px;
+  margin-bottom: 9%;
+  margin-top: 3%;
 }
 
 h1{
   color: var(--text-subheading-clr);
   font-family: var(--side-notes);
   font-weight: bold;
-  font-size: clamp(24px, 4vw, 36px);
+  font-size: clamp(18px, 4vw, 35px);
+  margin-bottom: 0;
+}
+h2{
+  color: var(--text-subheading-clr);
+  font-family: var(--side-notes);
+  font-weight: bold;
+  font-size: clamp(18px, 4vw, 30px);
   margin-bottom: 0;
 }
 
@@ -137,6 +145,7 @@ button:hover{
   cursor: pointer;
   color: var(--btn-text-clr);
   background-color: var(--heading1-clr);
+  border: 5px solid var(--grey-green);
 }
 
 /* footer is the seame as in home page */

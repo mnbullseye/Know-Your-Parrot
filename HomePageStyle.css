@@ -490,9 +490,98 @@ a{
 }
 
 
+@media (min-width: 900px) and (max-width: 1024px) {
+    .gradient-bar{
+        height: 3vh;
+    }
+    .about-us{
+        height: 50vh;
+    }
+    #about-us-img{
+        content: url("Project Assets/chat red macaw c2.png");
+        width: 380px;
+        height: 450px;
+        margin-top: 80px;
+        padding: 20px;
+    }
+    .guides{
+        height: 50vh;
+    }
+    .shop{
+        height: 70vh;
+    }
+    .products{
+        flex-direction: column-reverse;
+    }
+    .product-categories{
+        gap: 20px;
+        align-items: center;
+        justify-content: center;
+        margin-top: 50px;
+        margin-bottom: 0;
+    }
+    .heading-img-container img{
+        top: -15%;
+        left: 71%;
+    }
+    .footer{
+        height: 15vh;
+    }
+}
+
+@media (min-width: 601px) and (max-width: 899px) {
+    .gradient-bar{
+        height: 3vh;
+    }
+    .about-us{
+        height: 60vh;
+    }
+    #about-us-img{
+        content: url("Project Assets/chat red macaw c2.png");
+        width: 300px;
+        height: 400px;
+        margin-top: 80px;
+        padding: 20px;
+    }
+    .btn-and-text-container{
+        flex-direction: column;
+    }
+    .guides{
+        height: 120vh;
+    }
+    .guides-all{
+        flex-direction: column;
+    }
+    .guides-info{
+        margin-top: 80px;
+    }
+    .mul-guides{
+        gap: 20px;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        margin-top: 20px;
+    }
+    .products{
+        flex-direction: column-reverse;
+    }
+    .shop{
+        height: 90vh;
+    }
+    .product-categories{
+        margin-top: 50px;
+    }
+    .products{
+        height: 150vh;
+        margin-bottom: 50px;
+    }
+    .footer{
+        height: 20vh;
+    }
+}
 
 
-@media (max-width: 768px){
+@media (max-width: 600px){
     .hero{
         height: 97vh;
         padding: 10px;

@@ -33,11 +33,11 @@ h1 {
   color: var(--heading1-clr);
   font-family: var(--main-heading);
   font-weight: bold;
-  font-size: clamp(32px, 5vw, 46px);
+  font-size: 70px;
   padding: 35px;
   margin-bottom: 0;
   margin-top: 0;
-  padding-top: 0;
+  padding-bottom: 12px;
   text-align: center;
 }
 
@@ -76,7 +76,7 @@ p {
 
 .heading {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   padding: 0;
   justify-content: center;
   align-items: center;
@@ -90,6 +90,7 @@ p {
   text-align: center;
   width: 100%;
   margin: 0 auto;
+  margin-bottom: 5%
 }
 
 .cat {
@@ -196,8 +197,10 @@ header i:hover {
   font-size: 2rem;
   margin: 15px;
   text-decoration: none;
+  transition: transform 0.3s ease;
 }
 .footer-icon:hover{
+  transform: scale(1.02);
   font-size: 2.3rem;
   color: var(--pastel-green);
   cursor: pointer;
@@ -218,10 +221,14 @@ header i:hover {
     padding: 0 15px;
   }
   h1 {
-    padding: 25px 15px;
+    padding-bottom: 0px;
   }
   h2 {
-    padding: 25px 15px;
+    padding-top: 0px;
+    font-size: 30px;
+  }
+  p, a{
+    font-size: 20px;
   }
   .category {
     gap: 15px;
@@ -272,10 +279,11 @@ header i:hover {
     padding: 0 10px;
   }
   h1 {
-    padding: 20px 10px;
+    padding-bottom: 0px;
   }
   h2 {
-    padding: 20px 10px;
+    padding-top: 0px;
+    font-size: 35px;
   }
   .category {
     flex-direction: column;
@@ -291,10 +299,10 @@ header i:hover {
     height: 200px;
   }
   a {
-    font-size: 18px;
+    font-size: 20px;
   }
   p {
-    font-size: 14px;
+    font-size: 20px;
   }
   .footer-parrot-container {
     gap: 10px;
@@ -307,12 +315,43 @@ header i:hover {
     margin: 10px;
   }
   .footer-icon:hover {
-    font-size: 1.9rem;
+    font-size: 19px;
   }
 }
 
+@media screen and (max-width: 800px){
+  body{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .category {
+    gap: 30px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 20px;
+  }
+  .cat {
+    width: 500px;
+    padding: 20px;
+  }
+  h1{
+    font-size: 70px;
+    padding: 12px;
+  }
+  h2{
+    font-size: 40px;
+    padding: 12px;
+  }
+  a{font-size: 15px;}
+  p{font-size: 12px;}
+}
+
 /* Large Desktop Styles */
-@media screen and (min-width: 1200px) {
+@media screen and (max-width: 1200px) {
   body{
     display: flex;
     flex-direction: column;
@@ -329,4 +368,14 @@ header i:hover {
   .cat {
     width: 500px;
   }
+  h1{
+    font-size: 70px;
+    padding: 12px;
+  }
+  h2{
+    font-size: 40px;
+    padding: 12px;
+  }
+  a{font-size: 20px;}
+  p{font-size: 15px;}
 }

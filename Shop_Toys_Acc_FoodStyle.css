@@ -10,10 +10,19 @@ header{
   position: sticky;
   background-color: var(--bg-clr);
   padding: 10px 25px;
+  z-index: 100;
 }
-header a:hover{
-  color: var(--grey-green);
+header i {
+  font-size: 30px;
+  color: var(--text-subheading-clr);
+  cursor: pointer;
+  transition: color 0.3s ease;
 }
+
+header i:hover {
+  color: var(--heading1-clr);
+}
+
 main{
   display: grid;
   grid-template-columns: repeat(3, 1fr);

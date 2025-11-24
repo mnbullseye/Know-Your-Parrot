@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Shop_Toys_Acc_FoodStyle.css"> 
+    <link rel="stylesheet" href="DescriptionStyle.css"> 
+    <script src="https://kit.fontawesome.com/88f05daeb4.js" crossorigin="anonymous"></script>
+    <title id="page-title">Product Details</title>
+</head>
+<body>
+    <span class="nav-btn"><i class="fas fa-bars"></i></span>
+    <nav class="sidebar">
+        <div class="navbar-header">
+            <span class="close-icon"><i class="fas fa-times"></i></span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="HomePage.html">Home</a></li>
+            <li><a href="#">Guides</a></li>
+            <li><a href="#">Products</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Contact Us</a></li>
+            <li><a href="#">Login/Signup</a></li>
+            <li><a href="#">Cart</a></li>
+        </ul>
+    </nav>  
+    <header>
+        <a href="Cart.html"><i class="fa fa-shopping-cart"></i></a>
+    </header>
+
+    <main>
+        <span class="pro-img">
+            <img id="product-image" src="" alt="Product Image Placeholder">
+        </span>
+
+        <section class="product-info">
+            <h1 id="product-name" class="product-name">Loading...</h1>
+            <p id="product-price" class="product-price"></p>
+
+            <div class="product-description">
+                <a class="description-heading">Product Details</a>
+                <p id="product-long-description">Loading product description...</p>
+                <a class="description-heading">Key Features</a>
+                <ul>
+                    <li>Durable, natural wood and sisal rope.</li>
+                    <li>Bright, food-grade safe colors.</li>
+                    <li>Metal clip for easy cage attachment.</li>
+                </ul>
+            </div>
+
+            <div class="purchase-controls">
+                <div class="quantity-control">
+                    <label for="quantity">Quantity:</label>
+                    <input type="number" id="quantity" name="quantity" value="1" min="1" max="10">
+                </div>
+                <a class="add-to-cart-btn" id="add-to-cart-btn" data-product-id="">
+                    <i class="fa fa-shopping-cart"></i>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <div class="footer">
+        </div>
+
+    <script src="ProductDescription.js"></script>
+</body>
+</html>

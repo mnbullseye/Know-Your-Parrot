@@ -13,23 +13,42 @@ The following table lists all modules and pages in the website, detailing their 
 I focused primarily on the core user experience, educational content, and the final purchasing process.
 
 **Core Navigation & Landing:**
+
 Home Page
+
 Cart Page
+
 Checkout Page
+
 Educational Content:
+
 Guides Page (Directory of all guides)
+
 Individual Guide: Cockatiel
+
 Individual Guide: Cockatoo
+
 
 **Uswa**
 Uswa focused primarily on the e-commerce product structure, categorization, and essential user management/contact features.
 
 **Authentication & Contact:**
+
 Login/Signup Pages
+
 Contact Us Page
+
 E-Commerce Structure & Products:
+
 Shop Page (Main product listing)
+
 Shop: Food Category Page
+
 Shop: Accessories Category Page
+
 Shop: Toys Category Page
+
 Individual Product Description Page
+
+
+

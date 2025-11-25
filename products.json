@@ -1,0 +1,128 @@
+{
+  "toys": [
+    {
+      "id": "T001",
+      "title": "Toy 1",
+      "title_line": "The Feathered Friend Teaser",
+      "price": 9.99,
+      "image_url": "Shop Assets/Toy1.png",
+      "description": "A durable, brightly colored wooden toy designed for shredding and chewing. Helps satisfy natural instincts and reduce boredom in small to medium parrots."
+    },
+    {
+      "id": "T002",
+      "title": "Toy 2",
+      "title_line": "Bell & Rope Swing",
+      "price": 14.50,
+      "image_url": "Shop Assets/Toy2.png",
+      "description": "A combination swing and bell toy, offering both physical activity and auditory stimulation. Great for climbing and mental enrichment."
+    },
+    {
+      "id": "T003",
+      "title": "Toy 3",
+      "title_line": "Natural Coconut Hideout",
+      "price": 19.95,
+      "image_url": "Shop Assets/Toy3.png",
+      "description": "A safe, natural coconut shell house that provides a cozy, secure resting or hiding place for smaller birds like parakeets and cockatiels."
+    },
+    {
+      "id": "T004",
+      "title": "Toy 4",
+      "title_line": "Activity Foraging Wheel",
+      "price": 24.00,
+      "image_url": "Shop Assets/Toy4.png",
+      "description": "An advanced foraging toy that encourages problem-solving by requiring your parrot to manipulate mechanisms to retrieve treats."
+    },
+    {
+      "id": "T005",
+      "title": "Toy 5",
+      "title_line": "Sisal Knot Tugger",
+      "price": 7.25,
+      "image_url": "Shop Assets/Toy5.png",
+      "description": "Made from thick, bird-safe sisal rope knots, perfect for heavy chewers. Promotes beak health and provides strong visual interest."
+    },
+    {
+      "id": "T006",
+      "title": "Toy 6",
+      "title_line": "Mirror Buddy Cube",
+      "price": 11.99,
+      "image_url": "Shop Assets/Toy6.png",
+      "description": "A cube toy featuring a mirror for companionship and small plastic rings for playful interaction. Ideal for solitary birds."
+    }
+  ],
+  "food": [
+    {
+      "id": "F001",
+      "title": "food 1",
+      "title_line": "Daily Seed Mix Deluxe",
+      "price": 15.99,
+      "image_url": "Shop Assets/food1.png",
+      "description": "A high-quality, balanced blend of essential seeds, grains, and nuts for the daily maintenance of medium-sized parrots. Vitamin fortified."
+    },
+    {
+      "id": "F002",
+      "title": "food 2",
+      "title_line": "Tropical Fruit Pellets",
+      "price": 22.50,
+      "image_url": "Shop Assets/food2.png",
+      "description": "Uniform pellets containing all necessary nutrients, eliminating selective eating. Flavored with real dried tropical fruits."
+    },
+    {
+      "id": "F003",
+      "title": "food 3",
+      "title_line": "Nutritious Sprouting Blend",
+      "price": 18.00,
+      "image_url": "Shop Assets/food3.png",
+      "description": "A mix specifically formulated for easy sprouting, providing high levels of enzymes and amino acids for peak bird health."
+    }
+  ],
+  "accessories": [
+    {
+      "id": "A001",
+      "title": "Accessory 1",
+      "title_line": "Stainless Steel Food Bowl",
+      "price": 12.00,
+      "image_url": "Shop Assets/accessories1.png",
+      "description": "A durable, easy-to-clean stainless steel bowl that resists chewing and bacteria buildup. Comes with a secure cage mount."
+    },
+    {
+      "id": "A002",
+      "title": "Accessory 2",
+      "title_line": "Grooming Sand Perch",
+      "price": 25.99,
+      "image_url": "Shop Assets/accessories2.png",
+      "description": "A cement-like perch that naturally files down nails and beak tips as the bird perches, reducing the need for manual trimming."
+    },
+    {
+      "id": "A003",
+      "title": "Accessory 3",
+      "title_line": "Large Cage Water Dispenser",
+      "price": 18.50,
+      "image_url": "Shop Assets/accessories3.png",
+      "description": "A high-capacity, gravity-fed water dispenser that keeps water clean and fresh for longer periods, ideal for busy owners."
+    },
+    {
+      "id": "A004",
+      "title": "Accessory 4",
+      "title_line": "Feather Mister Spray Bottle",
+      "price": 8.99,
+      "image_url": "Shop Assets/accessories4.png",
+      "description": "Fine-mist spray bottle perfect for daily feather conditioning and maintaining necessary humidity for tropical parrots."
+    },
+    {
+      "id": "A005",
+      "title": "Accessory 5",
+      "title_line": "Portable Travel Carrier",
+      "price": 45.00,
+      "image_url": "Shop Assets/accessories5.png",
+      "description": "Lightweight, breathable, and secure carrier for short trips to the vet or outdoor excursions. Includes a perch and two small cups."
+    },
+    {
+      "id": "A006",
+      "title": "Accessory 6",
+      "title_line": "Full Spectrum UV Lamp",
+      "price": 39.99,
+      "image_url": "Shop Assets/accessories6.png",
+      "description": "A safe UV lamp that mimics natural sunlight, crucial for Vitamin D3 synthesis and overall bone health when kept indoors."
+    }
+  ]
+}

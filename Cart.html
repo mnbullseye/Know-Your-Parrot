@@ -8,12 +8,26 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Blinker:wght@100;200;300;400;600;700;800;900&family=Chewy&family=Lekton:ital,wght@0,400;0,700;1,400&family=Parisienne&family=Sniglet:wght@400;800&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/88f05daeb4.js" crossorigin="anonymous"></script>
-
+    <script src="brain.js" defer></script>
 </head>
 <body>
     <div class="head">
         <span class="nav-btn"><i class="fas fa-bars"></i></span>
-        <span class="cart-btn"><i class="fa-solid fa-cart-shopping"></i></span>
+        <nav class="sidebar">
+        <div class="navbar-header">
+            <span class="close-icon"><i class="fas fa-times"></i></span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="HomePage.html">Home</a></li>
+            <li><a href="Guides.html">Guides</a></li>
+            <li><a href="ShopPage.html">Products</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="ContactUs.html">Contact Us</a></li>
+            <li><a href="Login.html">Login/Signup</a></li>
+            <li><a href="Cart.html">Cart</a></li>
+        </ul>
+    </nav>
+        <a href="Cart.html"><span class="cart-btn"><i class="fa-solid fa-cart-shopping"></i></span></a>
     </div>
     <main>
         <h2>Cart</h2>
@@ -59,7 +73,7 @@
                     <p class="summary-subheading">Total</p>
                     <p class="summary-text">Rs.4250</p>
                 </div>
-                <button>Check Out</button>
+                <a href="CheckOut.html"><button>Check Out</button></a>
             </div>
         </div>
         <div class="footer">

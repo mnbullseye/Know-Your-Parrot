@@ -498,13 +498,10 @@ a{
     color: black;
     font-size: 5rem;
 }
-.shop-info p{
-    font-family: var(--text);
-    color: var(--text-subheading-clr);
-}
 .footer{
     display: flex;
     flex-direction: column;
+    width: 100%;
     /* border: 5px solid blueviolet; */
 }
 .footer-parrot-container{

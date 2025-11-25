@@ -6,8 +6,24 @@
   <title>Signup</title>
   <link rel="stylesheet" href="Signup_LoginStyle.css">
   <link rel="stylesheet" href="SignupStyle.css">
+  <script src="https://kit.fontawesome.com/88f05daeb4.js" crossorigin="anonymous"></script>
 </head>
 <body>
+    <span class="nav-btn"><i class="fas fa-bars"></i></span>
+    <nav class="sidebar">
+        <div class="navbar-header">
+            <span class="close-icon"><i class="fas fa-times"></i></span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="HomePage.html">Home</a></li>
+            <li><a href="Guides.html">Guides</a></li>
+            <li><a href="ShopPage.html">Products</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="ContactUs.html">Contact Us</a></li>
+            <li><a href="Login.html">Login/Signup</a></li>
+            <li><a href="Cart.html">Cart</a></li>
+        </ul>
+    </nav>  
   <main>
     <h1>Login/Signup</h1>
 
@@ -16,12 +32,12 @@
       <button id="sign">Signup</button>
     </section>
 
-    <input class="cont" type="text" name="Email" required minlength="4" placeholder="Email">
-    <input class="cont" type="text" name="Password" required minlength="8" placeholder="Password">
-    <input class="cont" type="text" name="Password" required minlength="8" placeholder="Confirm Password">
+    <input id="Email" class="cont" type="text" name="Email" required minlength="4" placeholder="Email">
+    <input id="Password" class="cont" type="text" name="Password" required minlength="8" placeholder="Password">
+    <input id="ConfirmPassword" class="cont" type="text" name="Password" required minlength="8" placeholder="Confirm Password">
     
-    <button id="btn">Signup</button>
-    <script src="loginSignup.js"></script>
+    <button id="btn" onclick="validateSignupForm()">Signup</button>
+    <script src="Signup.js"></script>
   </main>
 </body>
 </html>

@@ -2,8 +2,8 @@
  * @returns {boolean} 
  */
 function validateForm() {
-    const emailInput = document.getElementById('email');
-    const passwordInput = document.getElementById('password');
+    const emailInput = document.getElementById('Email');
+    const passwordInput = document.getElementById('Password');
 
     if (!emailInput || !passwordInput) {
         alert("Validation Error: Missing email or password input fields (check your IDs).");
@@ -36,3 +36,18 @@ function validateForm() {
     alert("Validation Successful! Submitting form...");
     return true; 
 }
+document.addEventListener('DOMContentLoaded', () => {
+    // --- Sidebar Toggle Functionality ---
+    const navBtn = document.querySelector(".nav-btn");
+    const closeBtn = document.querySelector(".close-icon");
+    const sidebar = document.querySelector(".sidebar");
+
+    if (navBtn && sidebar && closeBtn) {
+        function toggleSidebar() {
+            sidebar.classList.toggle("show");
+            navBtn.classList.toggle("show"); 
+        }
+        navBtn.addEventListener("click", toggleSidebar);
+        closeBtn.addEventListener("click", toggleSidebar);
+    }
+})

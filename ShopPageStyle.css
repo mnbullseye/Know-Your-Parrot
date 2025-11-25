@@ -13,7 +13,7 @@ body {
 
 header {
   display: flex;
-  flex-direction: row;
+  flex-direction: row-reverse;
   justify-content: space-between;
   position: sticky;
   top: 0;
@@ -21,6 +21,17 @@ header {
   background-color: var(--bg-clr);
   z-index: 100;
 }
+header i {
+  font-size: 2.7rem;
+  color: var(--text-subheading-clr);
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+header i:hover {
+  color: var(--heading1-clr);
+}
+
 
 main {
   display: flex;
@@ -131,17 +142,6 @@ p {
 
 #img3 {
   background-image: url("Shop Assets/accessories.png");
-}
-
-header i {
-  font-size: 30px;
-  color: var(--text-subheading-clr);
-  cursor: pointer;
-  transition: color 0.3s ease;
-}
-
-header i:hover {
-  color: var(--heading1-clr);
 }
 
 .sidebar {

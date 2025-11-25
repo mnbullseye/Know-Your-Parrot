@@ -15,14 +15,14 @@
         </div>
         <ul class="nav-links">
             <li><a href="HomePage.html">Home</a></li>
-            <li><a href="#">Guides</a></li>
-            <li><a href="#">Products</a></li>
+            <li><a href="Guides.html">Guides</a></li>
+            <li><a href="ShopPage.html">Products</a></li>
             <li><a href="#">About Us</a></li>
-            <li><a href="#">Contact Us</a></li>
-            <li><a href="#">Login/Signup</a></li>
-            <li><a href="#">Cart</a></li>
+            <li><a href="ContactUs.html">Contact Us</a></li>
+            <li><a href="Login.html">Login/Signup</a></li>
+            <li><a href="Cart.html">Cart</a></li>
         </ul>
-    </nav>  
+    </nav>   
   <main>
       <section class="contacts">
 
@@ -54,10 +54,10 @@
 
         <div class="send-msg">
           <h1 class="head">Contact Us</h1>
-          <input class="input-field" name="name" type="text" required placeholder="Name">
-          <input class="input-field" name="Email" type="text" required placeholder="Email Address">
-          <textarea class="input-field" id="msg" name="Message" required placeholder="Message"></textarea>
-          <button type="submit">Submit</button>
+          <input id="Name" class="input-field" name="name" type="text" required placeholder="Name">
+          <input id="Email" class="input-field" name="Email" type="text" required placeholder="Email Address">
+          <textarea id="Msg" class="input-field" id="msg" name="Message" required placeholder="Message"></textarea>
+          <button type="submit" onclick="validateContactForm()">Submit</button>
         </div>
 
       </section>

@@ -50,5 +50,19 @@ Shop: Toys Category Page
 
 Individual Product Description Page
 
+**Features:**
+
+1. You can view guides about different parrot species.
+   
+2. You can purchase products like food, toys accessories for parrots
+
+3. You can contact us
 
 
+**Tools Used:**
+
+HTML
+
+CSS
+
+JavaScript

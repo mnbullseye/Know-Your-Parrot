@@ -138,6 +138,26 @@ h2{
   margin-bottom: 0;
   margin-top: 0;
 }
+.add-to-cart{
+    padding: 0px;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--pastel-green);
+    color: white;
+    font-family: var(--sub-heading);
+    font-weight: bold;
+    font-size: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.add-to-cart:hover {
+    background-color: var(--grey-green); 
+}
+.add-to-cart i{
+  margin-right: 12px;
+}
+
 a{
   color: var(--heading1-clr);
   font-family: var(--sub-heading);
@@ -147,7 +167,6 @@ a{
   text-decoration: none;
 }
 a:hover{
-  /* text-decoration: wavy; */
   color: var(--light-green);
   cursor: pointer;
 }

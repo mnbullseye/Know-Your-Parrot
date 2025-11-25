@@ -1,0 +1,272 @@
+@import url("ProjectAssets.css");
+
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    position: relative;
+    background-color: var(--bg-clr);
+    min-height: 100vh;
+}
+a{
+    text-decoration: none;
+}
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: -100%;
+  width: 300px;
+  height: 100%;
+  background: var(--bg-clr);
+  box-shadow: 20px 0 10px rgba(0, 0, 0, 0.411);
+  transition: 0.3s ease-in-out;
+  padding: 2rem 0;
+  z-index: 1000;
+  border-top-right-radius: 20px;
+}
+
+
+.sidebar.show {
+  left: 0;
+  
+}
+
+
+.nav-links {
+  list-style: none;
+  margin-top: 2rem;
+  padding: 0;
+  
+}
+
+.nav-links li {
+  padding: 0.3rem 1rem ;
+  transition: padding-left 300ms ease-in;
+  padding: 20px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  font-size: 1.5rem;
+  font-family: var(--sub-heading);
+  font-weight: 100;
+  color: var(--heading1-clr);
+  letter-spacing: 6;
+  transition: 0.3s;
+}
+.nav-links li:hover {
+  background-color: white;
+  border-left: 8px solid var(--light-green);
+  padding-left: 10%;
+}
+
+.nav-btn{
+    display: block;
+    font-size: 2.8rem;
+    font-weight: bold;
+    color: var(--heading1-clr);
+    cursor: pointer;
+}
+.nav-btn.show{
+    display: none;
+}
+.close-icon {
+  font-size: 2rem;
+  color: var(--heading1-clr);
+  cursor: pointer;
+}
+.close-icon:hover{
+    color: red;
+}
+.nav-btn {
+  position: fixed;
+  top: 1rem;
+  left: 1rem;
+  z-index: 1100;
+}
+.close-icon {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+}
+
+
+/* --- Header Styling (Hamburger and Cart) --- */
+.guides-header {
+    display: flex;
+    justify-content: flex-end;
+    padding: 1.5rem 2rem;
+    color: var(--heading1-clr); /* Dark color for icons */
+}
+
+.nav-btn, .cart-icon {
+    font-size: 2.2rem;
+    cursor: pointer;
+    line-height: 1; /* Ensures vertical alignment */
+}
+
+/* --- Main Content and Headings --- */
+.guides-content {
+    /* Height setting removed to allow content to flow naturally */
+    text-align: center;
+    padding-top: 1rem; /* Reduced top padding */
+    padding-bottom: 5rem; /* Ensure space at the bottom */
+    /* border: 5px solid blue; <-- Removed debug border */
+}
+
+.main-title {
+    font-family: var(--main-heading);
+    letter-spacing: 5px; /* Added unit */
+    font-size: 5rem;
+    color: var(--heading1-clr);
+    margin-bottom: 0.5rem; /* Reduced margin below title */
+}
+
+.subtitle {
+    font-family: var(--side-notes); 
+    font-size: 2rem;
+    letter-spacing: 2px; /* Added unit */
+    color: var(--text-subheading-clr);
+    margin-bottom: 5rem; /* Increased margin to match image spacing before cards */
+}
+
+/* --- Guide Cards Layout (Spacing Optimized) --- */
+.card-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px; 
+    padding: 0 5%;
+    /* border: 5px solid rgb(255, 0, 0); <-- Removed debug border */
+}
+.card-container:hover{
+    cursor: pointer;
+}
+
+.guide-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 350px; 
+    
+}
+
+/* Dark Placeholder Box */
+.card-image-placeholder {
+    width: 300px;
+    height: 430px;
+    padding: 10px; 
+    background-color: var(--heading1-clr); /* Using a dark green/brown for the placeholder */
+    border-radius: 15px; 
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.card-image-placeholder:hover{
+    box-shadow: 0px 20px 10px 2px rgba(0, 0, 0, 0.2);
+}
+.card-image-placeholder img{
+    width: 95%; /* This will be overridden by the 100% width if placed inside */
+    height: 400px;
+    object-fit: cover;
+}
+
+.card-title {
+    /* Text font is Blinker, but the user used --text-font earlier. Sticking to the text font here. */
+    font-family: var(--text); 
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: var(--heading1-clr);
+    margin-bottom: 0.5rem;
+}
+.card-title:hover{
+
+}
+
+.card-text {
+    font-family: var(--text);
+    font-weight: 400;
+    font-size: 1rem;
+    color: var(--text-subheading-clr);
+}
+
+
+
+.footer{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    /* border: 5px solid blueviolet; */
+}
+.footer-parrot-container{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    background-color: var(--bg-clr);
+}
+.footer-parrot-container div{
+    width: 50vw;
+    padding: 0px 15px;
+}
+.footer-parrot-images-container-left{
+    display: flex;
+    flex-direction: row;
+}
+.footer-parrot-images-container-right{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+.footer img{
+    width: 50px;
+    padding: 0px 5px;
+   
+}
+.footer-info{
+    height: 23vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    background-color: var(--heading1-clr);
+    color: white;
+    font-family: var(--text);
+    letter-spacing: 1;
+}
+.footer a{
+    color: white;
+}
+.footer-icon{
+    font-size: 2rem;
+    margin: 15px;
+    text-decoration: none;
+}
+.footer-icon:hover{
+    font-size: 2.3rem;
+    color: var(--pastel-green);
+    cursor: pointer;
+}
+.footer-info p{
+    margin-top: 15px;
+}
+
+/* --- Media Query for Responsiveness (Mobile View) --- */
+@media (max-width: 768px) {
+    .main-title {
+        font-size: 3.5rem;
+    }
+    .subtitle {
+        font-size: 1.5rem;
+        margin-bottom: 3rem;
+    }
+    .card-container {
+        flex-direction: column; 
+        align-items: center;
+        gap: 4rem; 
+    }
+}

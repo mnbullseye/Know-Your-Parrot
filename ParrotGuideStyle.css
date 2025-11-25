@@ -1,0 +1,517 @@
+@import url(ProjectAssets.css);
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    position: relative;
+    font-family: var(--text), sans-serif;
+    background-color: var(--heading1-clr);
+    color: var(--heading1-clr);
+    padding: 40px;
+}
+a{
+    text-decoration: none;
+}
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: -100%;
+  width: 300px;
+  height: 100%;
+  background: var(--bg-clr);
+  box-shadow: 20px 0 10px rgba(0, 0, 0, 0.411);
+  transition: 0.3s ease-in-out;
+  padding: 2rem 0;
+  z-index: 1000;
+  border-top-right-radius: 20px;
+}
+
+
+.sidebar.show {
+  left: 0;
+  
+}
+
+
+.nav-links {
+  list-style: none;
+  margin-top: 2rem;
+  padding: 0;
+  
+}
+
+.nav-links li {
+  padding: 0.3rem 1rem ;
+  transition: padding-left 300ms ease-in;
+  padding: 20px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  font-size: 1.5rem;
+  font-family: var(--sub-heading);
+  font-weight: 100;
+  color: var(--heading1-clr);
+  letter-spacing: 6;
+  transition: 0.3s;
+}
+.nav-links li:hover {
+  background-color: white;
+  border-left: 8px solid var(--light-green);
+  padding-left: 10%;
+}
+
+.nav-btn{
+    display: block;
+    font-size: 2.8rem;
+    font-weight: bold;
+    color: var(--bg-clr);
+    cursor: pointer;
+}
+.nav-btn.show{
+    display: none;
+}
+.close-icon {
+  font-size: 2rem;
+  color: var(--heading1-clr);
+  cursor: pointer;
+}
+.close-icon:hover{
+    color: red;
+}
+.nav-btn {
+  position: fixed;
+  top: 1rem;
+  left: 1rem;
+  z-index: 1100;
+}
+.close-icon {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+}
+
+
+.page-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    background: var(--bg-clr);
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* --- H2 Page Heading (Centered) --- */
+.page-heading {
+    text-align: center;
+    font-family: var(--main-heading), sans-serif;
+    color: var(--bg-clr);
+    font-size: 36px;
+    padding-bottom: 10px;
+    margin-bottom: 25px;
+    margin-top: 20px;
+}
+
+/* --- New Main Cockatiel Image Styling --- */
+.main-cockatiel-image-container {
+    text-align: center; /* Center the image within its container */
+    margin: 30px auto; /* Add some vertical space and center the container */
+    max-width: 400px; /* Limit the max width of the image */
+}
+
+.main-cockatiel-image {
+    width: 100%; /* Make image responsive within its container */
+    height: auto;
+    border-radius: 12px;
+    border: 5px solid var(--light-green); /* A prominent border */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+
+/* --- Headings (Section Headings) --- */
+.main-heading {
+    font-family: var(--main-heading), sans-serif;
+    color: var(--heading1-clr);
+    font-size: 32px;
+    padding-bottom: 10px;
+    margin-bottom: 25px;
+    border-bottom: 3px solid var(--light-green);
+}
+
+.sub-heading {
+    font-family: var(--sub-heading), sans-serif;
+    color: var(--text-subheading-clr);
+    font-size: 22px;
+    margin-bottom: 15px;
+    margin-top: 15px;
+}
+
+.info-section {
+    margin-bottom: 40px;
+    padding-bottom: 20px;
+}
+
+/* --- Lists and Text --- */
+ul {
+    list-style: none;
+    padding-left: 20px;
+}
+
+li {
+    margin-bottom: 8px;
+    line-height: 1.5;
+    position: relative;
+    font-family: var(--text), sans-serif;
+}
+
+li::before {
+    content: '🦜';
+    color: var(--light-green); 
+    position: absolute;
+    left: -20px;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+p {
+    margin-bottom: 10px;
+    font-family: var(--text), sans-serif;
+}
+
+.highlight {
+    font-weight: 700;
+    color: var(--heading1-clr);
+}
+
+/* --- 1. General Info Layout --- */
+.general-info-grid {
+    display: flex;
+    gap: 30px;
+}
+
+.temperament-box {
+    flex: 2;
+}
+
+.material-safety-grid {
+    flex: 1;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 15px;
+    padding: 10px;
+}
+
+.info-card {
+    background: var(--pastel-green);
+    border: 1px solid var(--light-green);
+    padding: 15px;
+    border-radius: 8px;
+}
+
+.card-label {
+    font-weight: 600;
+    font-size: 14px;
+    color: var(--text-subheading-clr);
+    margin-bottom: 5px;
+}
+
+.card-value {
+    font-size: 18px;
+    font-weight: 800;
+    color: var(--heading1-clr);
+    margin: 0;
+}
+
+/* --- 2. Cage Requirements Layout --- */
+.cage-requirements-grid {
+    display: flex;
+    gap: 30px;
+}
+
+.cage-table {
+    flex: 3;
+}
+
+.size-details {
+    flex: 2;
+    padding: 15px;
+    border-left: 2px dashed var(--pastel-green);
+}
+
+.cage-description {
+    font-style: italic;
+    color: var(--text-subheading-clr);
+    margin-bottom: 20px;
+}
+
+.size-card {
+    background: var(--bg-clr);
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+/* --- 3. Diet & Nutrition Layout --- */
+.diet-flex {
+    display: flex;
+    gap: 30px;
+    align-items: flex-start;
+}
+
+.diet-table-wrapper {
+    flex: 2;
+}
+
+.toxic-foods-box {
+    flex: 1;
+    background-color: #ffcccc;
+    border: 3px solid #cc0000;
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 30px;
+}
+
+.toxic-foods-box li::before {
+    content: '🛑';
+}
+
+.toxic-foods-box ul {
+    padding-left: 15px;
+}
+
+.toxic-foods-box li {
+    font-weight: 600;
+    color: #333333;
+    margin-bottom: 10px;
+}
+
+.toxic-heading {
+    font-family: var(--sub-heading), sans-serif;
+    color: #cc0000;
+    font-size: 20px;
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #cc0000;
+}
+
+.water-note {
+    font-weight: 700;
+    color: var(--light-green);
+    margin-top: 15px;
+}
+
+/* --- Tables (General Styles) --- */
+.table-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 15px;
+    border-bottom: 1px solid var(--pastel-green);
+}
+
+.table-cell {
+    flex: 1;
+    padding: 0 10px;
+    font-size: 15px;
+    color: var(--heading1-clr);
+}
+
+.table-row.header, .danger-header {
+    background-color: var(--light-green);
+    color: var(--heading1-clr);
+    font-weight: 700;
+    font-family: var(--sub-heading), sans-serif;
+    border-radius: 4px 4px 0 0;
+}
+
+.table-row.header .table-cell, .danger-header .table-cell {
+    color: var(--heading1-clr);
+    padding: 10px;
+}
+
+/* Diet Table Specifics */
+.diet-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+.diet-table th, .diet-table td {
+    border: 1px solid var(--pastel-green);
+    padding: 10px;
+    text-align: left;
+    font-family: var(--text), sans-serif;
+}
+
+.diet-table thead th {
+    background-color: var(--light-green);
+    color: var(--heading1-clr);
+    font-family: var(--sub-heading), sans-serif;
+}
+
+/* --- 4. Environment & Safety Layout --- */
+.safety-grid {
+    display: flex;
+    gap: 30px;
+}
+
+.dangers-table {
+    flex: 3;
+}
+
+.safe-environment-info {
+    flex: 2;
+    padding: 20px;
+    background-color: var(--pastel-green);
+    border-radius: 8px;
+    height: fit-content;
+}
+
+.danger-header {
+    border-radius: 0;
+}
+
+.danger-row:nth-child(even) {
+    background-color: var(--bg-clr);
+}
+
+.image-gallery {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.image-gallery img {
+    width: 25%;
+    height: auto;
+    border-radius: 8px;
+    border: 3px solid var(--light-green);
+}
+
+/* =======================================
+   --- RESPONSIVENESS (MEDIA QUERIES) --- 
+   ======================================= */
+
+/* 1. Large Tablets and Smaller (Max 900px) */
+@media (max-width: 900px) {
+    body {
+        padding: 20px;
+    }
+    
+    .page-container {
+        padding: 30px;
+    }
+
+    /* Stack all multi-column sections vertically */
+    .general-info-grid,
+    .cage-requirements-grid,
+    .diet-flex,
+    .safety-grid {
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    /* Remove separation lines that relied on horizontal layout */
+    .size-details {
+        border-left: none;
+        padding-left: 0;
+    }
+    
+    .dangers-table,
+    .safe-environment-info {
+        flex: auto; /* Take full width */
+    }
+    
+    /* Adjust tables for better viewing on tablets */
+    .table-cell {
+        font-size: 14px;
+        padding: 5px 8px;
+    }
+    
+    .main-cockatiel-image-container {
+        margin: 20px auto;
+        max-width: 600px; /* Adjust max width for tablets */
+    }
+}
+
+
+/* 2. Small Tablets and Mobile Phones (Max 600px) */
+@media (max-width: 600px) {
+    body {
+        padding: 10px;
+    }
+
+    .page-container {
+        padding: 15px;
+        border-radius: 6px;
+    }
+    
+    /* Decrease primary headings */
+    .page-heading {
+        font-size: 28px;
+        margin-bottom: 15px;
+    }
+    
+    .main-heading {
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+    
+    .sub-heading {
+        font-size: 18px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    
+    /* Make image gallery stack vertically */
+    .image-gallery {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+        margin-top: 20px;
+    }
+    
+    .image-gallery img {
+        width: 100%;
+        max-width: 350px;
+    }
+
+    /* Adjust main cockatiel image for smaller screens */
+    .main-cockatiel-image-container {
+        margin: 15px auto;
+        max-width: 100%; /* Allow it to take full width of body padding */
+    }
+    .main-cockatiel-image {
+        border-width: 3px; /* Slightly thinner border */
+    }
+
+
+    /* Reduce padding and list marker position */
+    li {
+        font-size: 14px;
+    }
+    li::before {
+        left: -15px;
+    }
+    
+    /* Adjust table structure for small screens (reduces column padding) */
+    .diet-table th, .diet-table td,
+    .table-row {
+        padding: 8px;
+    }
+    
+    .table-cell {
+        font-size: 13px;
+    }
+    
+    /* Force Material and Safety table cells to wrap if necessary */
+    .cage-table .table-cell:nth-child(1) { flex: 0.8; }
+    .cage-table .table-cell:nth-child(2) { flex: 1; }
+    .cage-table .table-cell:nth-child(3) { flex: 1.2; }
+}

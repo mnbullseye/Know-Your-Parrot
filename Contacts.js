@@ -2,9 +2,9 @@
  * @returns {boolean} 
  */
 function validateContactForm() {
-    const nameInput = document.getElementById('contact-name');
-    const emailInput = document.getElementById('contact-email');
-    const messageInput = document.getElementById('contact-message');
+    const nameInput = document.getElementById('Name');
+    const emailInput = document.getElementById('Email');
+    const messageInput = document.getElementById('Msg');
 
     if (!nameInput || !emailInput || !messageInput) {
         alert("Validation Error: Missing form elements. Check your IDs.");

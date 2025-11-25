@@ -2,8 +2,8 @@
  * @returns {boolean} 
  */
 function validateForm() {
-    const emailInput = document.getElementById('email');
-    const passwordInput = document.getElementById('password');
+    const emailInput = document.getElementById('Email');
+    const passwordInput = document.getElementById('Password');
 
     if (!emailInput || !passwordInput) {
         alert("Validation Error: Missing email or password input fields (check your IDs).");

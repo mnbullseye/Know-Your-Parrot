@@ -1,4 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
+
+    
     // --- Sidebar Toggle Functionality ---
     const navBtn = document.querySelector(".nav-btn");
     const closeBtn = document.querySelector(".close-icon");

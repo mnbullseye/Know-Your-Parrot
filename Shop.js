@@ -12,4 +12,8 @@ document.addEventListener('DOMContentLoaded', () => {
         navBtn.addEventListener("click", toggleSidebar);
         closeBtn.addEventListener("click", toggleSidebar);
     }
+
+
+
+    
 })

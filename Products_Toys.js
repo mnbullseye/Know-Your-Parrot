@@ -1,5 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
 
+
+    
     // --- Sidebar Toggle Functionality ---
     const navBtn = document.querySelector(".nav-btn");
     const closeBtn = document.querySelector(".close-icon");
@@ -13,6 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
         navBtn.addEventListener("click", toggleSidebar);
         closeBtn.addEventListener("click", toggleSidebar);
     }
+
     
     const productsContainer = document.getElementById('products-container');
     

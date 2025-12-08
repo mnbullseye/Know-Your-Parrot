@@ -204,17 +204,6 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
         
-        // Payment option selection visual feedback
-        const paymentCards = document.querySelectorAll('.payment-options .option-card');
-        paymentCards.forEach(card => {
-            card.addEventListener('click', () => {
-                paymentCards.forEach(c => c.classList.remove('selected'));
-                card.classList.add('selected');
-                const radio = card.querySelector('input[type="radio"]');
-                if (radio) {
-                    radio.checked = true;
-                }
-            });
-        });
+       
     }
 });

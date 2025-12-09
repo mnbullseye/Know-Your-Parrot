@@ -1,7 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
 
-
-    
     // --- Sidebar Toggle Functionality ---
     const navBtn = document.querySelector(".nav-btn");
     const closeBtn = document.querySelector(".close-icon");
@@ -26,59 +24,16 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 });
 
-async function loadProductDetails(targetId) {
-    try {
-        const response = await fetch('products.json');
-        
-        if (!response.ok) {
-            throw new Error('Catalog failed to load.');
-        }
-        
-        const data = await response.json();
-        
-        let product = null;
-        for (const category in data) {
-            product = data[category].find(p => p.id === targetId);
-            if (product) break; 
-        }
-
-        if (product) {
-            document.getElementById('product-name').textContent = `${product.title}: ${product.title_line}`;
-            document.getElementById('product-price').textContent = `$${product.price.toFixed(2)}`;
-            document.getElementById('product-long-description').textContent = product.description;
-            document.getElementById('product-image').src = product.image_url;
-            document.getElementById('product-image').alt = product.title;
-            document.getElementById('add-to-cart-btn').setAttribute('data-product-id', product.id);
-        } else {
-            document.getElementById('product-name').textContent = 'Product Not Found in Catalog';
-        }
-
-    } catch (error) {
-        console.error('Error loading product details:', error);
-        document.getElementById('product-name').textContent = 'Error Loading Data (Check Network)';
-    }
-}
-
-
-// --- Cart Utility Functions ---
-
-/**
- * Retrieves the cart array from localStorage, or returns an empty array if not found.
- */
 function getCart() {
     const cart = localStorage.getItem('cart');
     return cart ? JSON.parse(cart) : [];
 }
 
-/**
- * Saves the given cart array to localStorage.
- */
 function saveCart(cart) {
     localStorage.setItem('cart', JSON.stringify(cart));
 }
 
 /**
- * Adds a product (with quantity) to the cart in localStorage.
  * @param {string} productId - The unique ID of the product.
  * @param {number} quantity - The quantity to add.
  * @param {object} productDetails - The full details of the product (title, price, image_url).
@@ -104,9 +59,6 @@ function addToCart(productId, quantity, productDetails) {
     alert(`Added ${quantity} x ${productDetails.title} to cart!`);
 }
 
-
-// --- Product Page Logic ---
-
 document.addEventListener('DOMContentLoaded', () => {
     const urlParams = new URLSearchParams(window.location.search);
     const productId = urlParams.get('id');
@@ -120,7 +72,6 @@ document.addEventListener('DOMContentLoaded', () => {
         document.getElementById('product-name').textContent = 'Error: No product ID found in the URL.';
     }
 
-    // Attach event listener to the "Add to Cart" button
     const addToCartBtn = document.getElementById('add-to-cart-btn');
     const quantityInput = document.getElementById('quantity');
 
@@ -169,7 +120,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
                 // Update HTML elements
                 document.getElementById('product-name').textContent = `${product.title}`;
-                // Assuming 'title_line' is removed as it's not in the previous output, or just use the title
                 document.getElementById('page-title').textContent = product.title; 
                 document.getElementById('product-price').textContent = `Rs.${product.price.toFixed(2)}`;
                 document.getElementById('product-long-description').textContent = product.description;
